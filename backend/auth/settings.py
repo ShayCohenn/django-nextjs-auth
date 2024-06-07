@@ -167,6 +167,12 @@ DJOSER = {
 }
 
 AUTH_COOKIE = 'access'
+AUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5
+AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24
+AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'True') == 'True'
+AUTH_COOKIE_HTTP_ONLY = True
+AUTH_COOKIE_PATH = '/'
+AUTH_COOKIE_SAMESITE = 'None'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
